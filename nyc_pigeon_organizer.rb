@@ -34,7 +34,15 @@ def nyc_pigeon_organizer(data)
       pigeon_list[name][k] = [] 
     end
   end
-  
+  pigeon_names.each do |name|
+    data.each do |attribute1, specific1|
+      data[attribute1].each do |specific2, names2|
+        if data[attribute1][specific2].any? { |pigeon| pigeon == name } == true
+          pigeon_list[name][attribute1].push(specific2.to_s)
+        end
+      end
+    end
+  end
   pigeon_list
 end
 
