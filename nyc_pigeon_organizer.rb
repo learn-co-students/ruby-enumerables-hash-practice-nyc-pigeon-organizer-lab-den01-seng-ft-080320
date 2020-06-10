@@ -47,22 +47,4 @@ def nyc_pigeon_organizer(data)
 end
 
 
-'''def nyc_pigeon_organizer(data)
-  pigeon_names = []
-  data.each do |k, v|
-    data[k].each do |k2, v2|
-      pigeon_names << data[k][k2]
-    end
-  end
-  pigeon_names = pigeon_names.flatten.uniq
-  pigeon_list = {}
-  pigeon_names.each do |name|
-    data.each do |k, v|
-      pigeon_list[name] = {k => []}
-      #binding.pry
-    end
-  end
-  pigeon_list
-end'''
-
 puts nyc_pigeon_organizer(pigeon_data)
